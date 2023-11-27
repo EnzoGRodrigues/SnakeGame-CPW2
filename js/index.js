@@ -76,23 +76,22 @@ function gameEngine(){
         snakeArr.unshift({x: snakeArr[0].x + inputDir.x, y: snakeArr[0].y + inputDir.y});
         let a = 2;
         let b = 16;
-        food = {x: Math.round(a + (b-a)* Math.random()), y: Math.round(a + (b-a)* Math.random())}
+        food = {x: Math.round(a + (b-a)* Math.random()), y: Math.round(a + (b-a)* Math.random())} // posição aleatória da comida
         
         if (Math.random() < 0.2) {
-            obstacle.x = Math.round(2 + 14 * Math.random());
+            obstacle.x = Math.round(2 + 14 * Math.random()); // posição aleatória do obstáculo
             obstacle.y = Math.round(2 + 14 * Math.random());
         }
     }
 
     // Movendo a cobra
-    for (let i = snakeArr.length - 2; i>=0; i--) { 
+    for (let i = snakeArr.length - 2; i>=0; i--) {  
         snakeArr[i+1] = {...snakeArr[i]};
     }
-
     snakeArr[0].x += inputDir.x;
     snakeArr[0].y += inputDir.y;
 
-    // Exibir a cobra, a comida e o obstáculo
+    // ============= Exibindo cobra, comida e obstáculo =============
     // Display snake
     board.innerHTML = "";
     snakeArr.forEach((e, index)=>{
