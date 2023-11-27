@@ -24,7 +24,7 @@ body{
 
 #hiscoreBox{
     position: absolute;
-    top: 450px;
+    top: 350px;
     right: 918px;
     font-size: 39px;
     font-weight: bold;
@@ -77,5 +77,15 @@ body{
     background-color: red;
     border: .25vmin solid black;
     border-radius: 0px;
+}
+.obstacle-example {
+    width: 20px;
+    height: 20px;
+    background-color: red;
+}
+.food-example{
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(rgb(242, 255, 0), rgb(17, 253, 0));
 }
 
